@@ -23,7 +23,8 @@ function HW1() {
             <div style={{maxWidth: 900}}>
                 {messageUser.map((m, i) => {
                     return (
-                        <div className={style.messageContainer}>
+                        <div className={style.messageContainer}
+                             key={i}>
                             <Message
                                 key={i}
                                 avatar={m.avatar}
