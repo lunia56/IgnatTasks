@@ -1,3 +1,105 @@
-.message {
+/*.message {*/
 
+/*}*/
+
+:root {
+    --color: #aef2d3;
+    --width: 200px;
+    --radius: 16px;
+    --colorText: #0d6d01
+}
+
+.container {
+    background-color: #6d94e8;
+    height: 100vh;
+}
+
+.messageContainer {
+    display: flex;
+    margin: 15px 20px;
+}
+
+.message {
+    box-sizing: border-box;
+    padding: 1rem;
+    min-width: var(--width);
+    max-width: max-content;
+    margin: auto 32px;
+    background-color: var(--color);
+    border-radius: var(--radius) var(--radius) var(--radius) 0;
+    position: relative;
+    opacity: 90%;
+}
+
+.message::before, .message::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+}
+
+.message::before {
+    width: var(--radius);
+    height: var(--radius);
+    left: calc(var(--radius) * -1);
+    background-color: var(--color);
+
+}
+
+.message::after {
+    width: calc(var(--radius) * 2);
+    height: calc(var(--radius) * 2);
+    left: calc(var(--radius) * -2);
+    background-color: #6d94e8;
+    border-radius: 90%;
+}
+
+
+.avatar {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    margin: auto 0 0 15px;
+    /*padding: 1rem;*/
+}
+
+.textName {
+    font-size: unset;
+    color: var(--colorText);
+    font-weight: bold;
+}
+
+.textMessage {
+    font-size: smaller;
+    color: var(--colorText);
+    font-style: oblique;
+    margin-bottom: 13px;
+
+}
+
+.time {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    color: var(--colorText);
+
+}
+
+.input {
+    display: flex;
+    align-items: center;
+}
+
+.textarea {
+    margin: auto 0 0 30px;
+    background-color: #A7E8D5;
+    color: #0d6d01;
+}
+
+.button {
+    margin: auto 0 0 15px;
+    background-color: var(--color);
+    color: var(--colorText);
+    border-radius: 15px;
+    border: 2px solid;
 }

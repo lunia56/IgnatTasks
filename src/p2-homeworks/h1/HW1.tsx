@@ -1,26 +1,57 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Message, {messageDataType} from './Message';
+import style from './Message.module.css';
 
-const messageData = {
-    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    name: 'Some Name',
-    message: 'some text',
-    time: '22:00',
-}
 
 function HW1() {
+    let [messageUser, setMessageUser] = useState<messageDataType[]>([
+        {
+            avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
+            name: 'Micola',
+            message: 'Привет! Напиши мне сообщение! =) ',
+            time: new Date().toLocaleTimeString(),
+        }]
+    )
+
+    const [t, setT] = useState<string>('')
+
+
     return (
-        <div>
+        <div className={style.container}>
             <hr/>
-            homeworks 1
+            {/*homeworks 1*/}
+            <div style={{maxWidth: 900}}>
+                {messageUser.map((m, i) => {
+                    return (
+                        <div className={style.messageContainer}>
+                            <Message
+                                key={i}
+                                avatar={m.avatar}
+                                name={m.name}
+                                message={m.message}
+                                time={m.time}
+                            />
+                        </div>
+                    )
+                })}
 
-            {/*should work (должно работать)*/}
-
-            {/*<Message*/}
-            {/*    avatar={messageData.avatar}*/}
-            {/*    name={messageData.name}*/}
-            {/*    message={messageData.message}*/}
-            {/*    time={messageData.time}*/}
-            {/*/>*/}
+            </div>
+            <div className={style.input}>
+                <textarea className={style.textarea} value={t} onChange={event => setT(event.currentTarget.value)}/>
+                <button className={style.button}
+                        onClick={() => {
+                            setMessageUser([
+                                ...messageUser,
+                                {
+                                    avatar: messageUser[0].avatar,
+                                    name: messageUser[0].name,
+                                    message: t,
+                                    time: messageUser[0].time
+                                }])
+                            setT('')
+                        }}>Send
+                </button>
+            </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
