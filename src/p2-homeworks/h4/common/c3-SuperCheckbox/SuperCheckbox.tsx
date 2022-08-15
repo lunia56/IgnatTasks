@@ -20,7 +20,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     }
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // сделайте так чтоб работал onChange и onChangeChecked
+        onChangeChecked?.(e.currentTarget.checked)  // оператор связывания(?.) дублирует опциональность этой функции, как передано в пропсах
+        onChange?.(e)
     }
 
     const finalInputClassName = `${s.checkbox} ${className ? className : ''}`

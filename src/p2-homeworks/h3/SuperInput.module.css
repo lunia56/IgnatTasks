@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.superInput {
+    background-color: darkgreen;
+    color: cyan;
+    border: 3px solid cyan;
+
+}
+
+.errorInput {
+    border: 3px solid crimson;
+    background-color: darksalmon;
+
+}
+
+.error {
+    color: red;
+}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import Message, {messageDataType} from './Message';
 import style from './Message.module.css';
 
@@ -15,9 +15,25 @@ function HW1() {
 
     const [t, setT] = useState<string>('')
 
+    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        setT(e.currentTarget.value)
+    }
+
+    const onClickHandler = () => {
+        setMessageUser([
+            ...messageUser,
+            {
+                avatar: messageUser[0].avatar,
+                name: messageUser[0].name,
+                message: t,
+                time: new Date().toLocaleTimeString()
+            }])
+        setT('')
+    }
+
 
     return (
-        <div className={style.container}>
+        <>
             <hr/>
             {/*homeworks 1*/}
             <div style={{maxWidth: 900}}>
@@ -38,19 +54,11 @@ function HW1() {
 
             </div>
             <div className={style.input}>
-                <textarea className={style.textarea} value={t} onChange={event => setT(event.currentTarget.value)}/>
+                <textarea className={style.textarea}
+                          value={t}
+                          onChange={onChangeHandler}/>
                 <button className={style.button}
-                        onClick={() => {
-                            setMessageUser([
-                                ...messageUser,
-                                {
-                                    avatar: messageUser[0].avatar,
-                                    name: messageUser[0].name,
-                                    message: t,
-                                    time: messageUser[0].time
-                                }])
-                            setT('')
-                        }}>Send
+                        onClick={onClickHandler}>Send
                 </button>
             </div>
 
@@ -58,7 +66,7 @@ function HW1() {
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeMessage/>*/}
             <hr/>
-        </div>
+        </>
     )
 }
 

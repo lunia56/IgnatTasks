@@ -1,12 +1,13 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
-
+import s from './Affairs.module.css'
 
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
     setFilter: (priority: FilterType) => void
     deleteAffairCallback: (_id: number) => void
+    filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -31,15 +32,39 @@ function Affairs(props: AffairsPropsType) {
         props.setFilter('low')
     }
 
+    const set = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        props.setFilter(e.currentTarget.value as FilterType)
+    }
+
+    const setClass = (filter: FilterType) => {
+        return s.button + (props.filter === filter ? ' ' + s.active : '')
+    }
     return (
-        <div>
+        <div className={s.container}>
 
             {mappedAffairs}
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            {/*<button className={cnAll} onClick={setAll}>All</button>*/}
+            {/*<button className={cnHigh} onClick={setHigh}>High</button>*/}
+            {/*<button className={cnMiddle} onClick={setMiddle}>Middle</button>*/}
+            {/*<button className={cnLow} onClick={setLow}>Low</button>*/}
+
+            <button className={setClass('all')}
+                    onClick={set}
+                    value={'all'}>All
+            </button>
+            <button className={setClass('high')}
+                    onClick={set}
+                    value={'high'}>High
+            </button>
+            <button className={setClass('middle')}
+                    onClick={set}
+                    value={'middle'}>Middle
+            </button>
+            <button className={setClass('low')}
+                    onClick={set}
+                    value={'low'}>Low
+            </button>
         </div>
     )
 }

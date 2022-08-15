@@ -1,7 +1,28 @@
-.someClass {
+.greeting {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+.input {
+    border: 1px solid green;
 
 }
 
 .error {
-    border: 1px solid red;
+    border: crimson 1px solid;
+    color: crimson;
+}
+
+.red {
+    background: red;
+}
+
+.superButton {
+    margin: 0 10px;
+    background-color: cyan;
+}
+
+.totalUsers {
+    color: cyan;
 }

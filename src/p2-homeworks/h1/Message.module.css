@@ -10,7 +10,7 @@
 }
 
 .container {
-    height: 175px;
+
 }
 
 .messageContainer {
@@ -73,6 +73,7 @@
     color: var(--colorText);
     font-style: oblique;
     margin-bottom: 13px;
+    word-wrap: break-word;
 
 }
 
