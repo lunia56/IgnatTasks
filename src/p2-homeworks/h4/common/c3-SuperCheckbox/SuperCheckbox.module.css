@@ -11,11 +11,15 @@
     background: #335533;
     cursor: pointer;
     margin-right: 10px;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 32px;
 }
 
 .checkbox:checked {
     appearance: none;
-    background-image: url("check-box.png");
+    background-image: url("icons8.png");
+
 }
 
 .checkbox:focus {
