@@ -1,5 +1,25 @@
-.checkbox {
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #335533;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox:checked {
+    appearance: none;
+    background-image: url("check-box.png");
+}
+
+.checkbox:focus {
+    outline: #99ff99 solid 1px;
 }
 
 .spanClassName {

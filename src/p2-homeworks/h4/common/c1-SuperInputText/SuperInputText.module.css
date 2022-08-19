@@ -1,4 +1,5 @@
 .superInput {
+    outline: none;
     background: crimson !important;
     color: coral;
     border: 3px solid cyan !important;
