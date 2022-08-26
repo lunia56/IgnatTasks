@@ -3,13 +3,6 @@
 /*}*/
 
 
-:root {
-    --color: #aef2d3;
-    --width: 200px;
-    --radius: 16px;
-    --colorText: #0d6d01
-}
-
 .container {
 
 }
@@ -49,7 +42,7 @@
     width: calc(var(--radius) * 2);
     height: calc(var(--radius) * 2);
     left: calc(var(--radius) * -2);
-    background-color: #5ca4ea;
+    background-color: var(--rootColor);
     border-radius: 90%;
 }
 
@@ -93,14 +86,19 @@
 
 .textarea {
     margin: auto 0 0 30px;
-    background-color: #A7E8D5;
-    color: #0d6d01;
+    background-color: var(--color);
+    color: var(--colorText);
+    border: 1px solid var(--colorBorder);
 }
 
 .button {
     margin: auto 0 0 15px;
-    background-color: var(--color);
+    background-color: var(--colorButton);
     color: var(--colorText);
     border-radius: 15px;
-    border: 2px solid;
+    border: 1px solid var(--colorBorder);
+}
+
+.button:hover {
+    cursor: pointer
 }

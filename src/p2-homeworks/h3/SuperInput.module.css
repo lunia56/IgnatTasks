@@ -4,9 +4,9 @@
 }
 
 .superInput {
-    background-color: darkgreen;
-    color: cyan;
-    border: 3px solid cyan;
+    background-color: var(--color);
+    color: var(--colorText);
+    border: 3px solid var(--colorBorder);
 
 }
 

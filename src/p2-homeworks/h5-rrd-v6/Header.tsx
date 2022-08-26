@@ -7,9 +7,10 @@ function Header() {
         <div className={s.slideContainer}>
             <div className={s.slide}>
                 <div className={s.slideContent}>
-                    <NavLink to={'/pre-junior'} className={s.text}>PreJunior</NavLink>
-                    <NavLink to={'/junior'} className={s.text}>Junior</NavLink>
-                    <NavLink to={'/junior-plus'} className={s.text}>Junior+</NavLink>
+                    <NavLink to={'/pre-junior'}
+                             className={({isActive}) => isActive ? s.active : s.text}>PreJunior</NavLink>
+                    <NavLink to={'/junior'} className={({isActive}) => isActive ? s.active : s.text}>Junior</NavLink>
+                    <NavLink to={'/junior-plus'} className={({isActive}) => isActive ? s.active : s.text}>Junior+</NavLink>
                 </div>
                 <div className={s.slideHeader}>Nav</div>
             </div>

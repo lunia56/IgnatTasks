@@ -35,7 +35,7 @@ function HW1() {
     return (
         <>
             <hr/>
-            {/*homeworks 1*/}
+            homeworks 1
             <div style={{maxWidth: 900}}>
                 {messageUser.map((m, i) => {
                     return (

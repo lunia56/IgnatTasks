@@ -2,18 +2,33 @@
     margin: auto 30px;
 }
 
+.span {
+    color: var(--colorText);
+    font-family: inherit;
+}
+
+
 .button {
-    background-color: lightseagreen;
-    border: midnightblue 1px solid;
-    color: midnightblue;
+    background-color: var(--colorButton);
+    border: 1px solid;
+    color: var(--colorText);
+    border-color: var(--colorBorder);
+    margin: 5px;
+    font-family: inherit;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .active {
-    background-color: hotpink;
+    background-color: var(--colorHighText);
+    border-color: var(--colorBorder);
 }
 
 .priority {
     margin: auto 10px;
+    font-family: inherit;
 }
 
 .high {
@@ -21,14 +36,20 @@
 }
 
 .middle {
-    color: gold;
+    color: #f8f405;
 }
 
 .low {
-    color: lawngreen;
+    color: #5aef04;
 }
 
 .removeButton {
-    background-color: crimson;
+    background-color: var(--colorButton);
+    border-color: var(--colorBorder);
     opacity: 90%;
+    color: var(--colorText);
+}
+
+.removeButton:hover {
+    cursor: pointer;
 }

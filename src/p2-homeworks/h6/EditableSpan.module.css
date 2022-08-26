@@ -1,0 +1,41 @@
+.editableSpan {
+    /*display: flex;*/
+    width: 100px;
+    height: calc(1.5rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--colorText);
+    background-color: var(--rootColor);
+    background-clip: padding-box;
+}
+
+.input {
+    display: block;
+    width: 200px;
+    height: calc(1.50rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--colorTitle);
+    background-color: var(--color);
+    border: 1px solid var(--colorBorder);
+    border-radius: 0.25rem;
+}
+
+.container {
+    margin: 5px;
+
+}
+
+.pen {
+    color: var(--colorButton)
+}
+
+.pen:hover {
+    cursor: pointer
+}
