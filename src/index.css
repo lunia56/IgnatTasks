@@ -3,10 +3,10 @@
     --color: #aef2d3;
     --width: 200px;
     --radius: 16px;
-    --colorText: #0d6d01;
-    --colorHighText: #ea69b5;
+    --colorText: rgb(24, 20, 126);
+    --colorHighText: #f334a4;
     --colorButton: #70ec83;
-    --colorBorder: #e8eae8;
+    --colorBorder: #1cefea;
     --rootColor: #5CA4EA;
     --colorTitle: #1295c9
 }
