@@ -1,0 +1,17 @@
+.buttons {
+    display: flex;
+}
+
+.listItem {
+    color: var(--colorText);
+}
+
+.listItemAge {
+    position: absolute;
+    right: 0px
+}
+
+.listItems {
+    width: 200px;
+    position: relative;
+}
