@@ -1,4 +1,5 @@
 import React from 'react'
+import {Slider} from 'antd';
 
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: [number, number]) => void
@@ -9,15 +10,17 @@ type SuperDoubleRangePropsType = {
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
-        // min, max, step, disable, ...
     }
 ) => {
-    // сделать самому, можно подключать библиотеки
+
+    const onChangeCallback = (e:[number,number]) => {
+        onChangeRange && onChangeRange(e)
+    }
 
     return (
-        <>
-            DoubleRange
-        </>
+        <div style={{minWidth:200, marginLeft: 10, marginRight:10}}>
+            <Slider range defaultValue={value}  onChange={onChangeCallback} value={value}/>
+        </div>
     )
 }
 
