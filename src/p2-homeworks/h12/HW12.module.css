@@ -1,23 +1,29 @@
+
 .dark {
     background: dimgrey;
+    height: 150px;
+
 }
 
 .dark-text {
     color: aliceblue;
 }
 
-.red {
-    background: lightcoral;
+.blue {
+    background: #DCEEFF;
+    height: 150px;
 }
 
-.red-text {
-    color: aqua;
+.blue-text {
+    color: #131313;
 }
 
-.some {
-    background: lightgreen;
+.light {
+    background: #FFFFFF;
+    height: 150px;
 }
 
-.some-text {
-    color: darkslateblue;
+.light-text {
+    color: #131313;
+    margin-right: 10px;
 }
