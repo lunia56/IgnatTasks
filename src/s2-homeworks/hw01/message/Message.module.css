@@ -1,0 +1,46 @@
+
+.message {
+    text-align: end;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.imageAndText img {
+    height: 48px;
+    width: 48px;
+    margin-left: 7px;
+
+}
+
+.text {
+    background-color: #0066CC;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 5px;
+    padding: 7px;
+    justify-content: end;
+}
+
+.text:after {
+
+}
+
+.name {
+    font-weight: 600;
+}
+
+.messageText {
+    font-size: 16px;
+
+
+}
+
+.time {
+    text-align: end;
+    font-size: 10px;
+    font-weight: 600;
+    padding-right: 10px;
+
+}
