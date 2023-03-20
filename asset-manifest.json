@@ -1,13 +1,26 @@
 {
   "files": {
-    "main.css": "/IgnatTasks/static/css/main.209c76a2.css",
-    "main.js": "/IgnatTasks/static/js/main.4be44a0a.js",
+    "main.css": "/IgnatTasks/static/css/main.13d0be11.css",
+    "main.js": "/IgnatTasks/static/js/main.b8d71b86.js",
+    "static/js/787.23f4d163.chunk.js": "/IgnatTasks/static/js/787.23f4d163.chunk.js",
+    "static/media/spinner.gif": "/IgnatTasks/static/media/spinner.84854ff809ee5f4b8460.gif",
+    "static/media/avatar.png": "/IgnatTasks/static/media/avatar.d947cb9d0d13765666b6.png",
+    "static/media/200.svg": "/IgnatTasks/static/media/200.96248f7df0dde10e0a82ac30418f50bc.svg",
+    "static/media/error.svg": "/IgnatTasks/static/media/error.5a3135f381b00b53044eff200e725391.svg",
+    "static/media/500.svg": "/IgnatTasks/static/media/500.adbc5f265f6f3c1fb9c5633ffe365afa.svg",
+    "static/media/400.svg": "/IgnatTasks/static/media/400.8baa1b795048b6fa13ff8d30800aa1b1.svg",
+    "static/media/404.svg": "/IgnatTasks/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
+    "static/media/closeOutline.svg": "/IgnatTasks/static/media/closeOutline.b64ba402fac8a549bc2de97e9cf84a61.svg",
+    "static/media/editIcon.svg": "/IgnatTasks/static/media/editIcon.0a0cefd2190b593b4f76bb1a5afe0c1f.svg",
     "index.html": "/IgnatTasks/index.html",
-    "main.209c76a2.css.map": "/IgnatTasks/static/css/main.209c76a2.css.map",
-    "main.4be44a0a.js.map": "/IgnatTasks/static/js/main.4be44a0a.js.map"
+    "static/media/checked.svg": "/IgnatTasks/static/media/checked.b75ca55e8759862b4083.svg",
+    "static/media/burger.svg": "/IgnatTasks/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
+    "main.13d0be11.css.map": "/IgnatTasks/static/css/main.13d0be11.css.map",
+    "main.b8d71b86.js.map": "/IgnatTasks/static/js/main.b8d71b86.js.map",
+    "787.23f4d163.chunk.js.map": "/IgnatTasks/static/js/787.23f4d163.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.209c76a2.css",
-    "static/js/main.4be44a0a.js"
+    "static/css/main.13d0be11.css",
+    "static/js/main.b8d71b86.js"
   ]
 }
