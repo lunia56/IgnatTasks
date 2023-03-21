@@ -49,33 +49,29 @@ const HW13 = () => {
 
 
             .catch((e) => {
-                setTimeout(()=>{
-                    setLoading(false)
-                }, 2000)
-
-                setCode(e.message)
-                setImage(errorUnknown)
-                setInfo('AxiosError')
-                if(e.response.status=== 500){
-                    setImage(error500)
-                    setCode(e.message)
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
+                switch (e.response.status) {
+                    case 400: {
+                        setCode('Ошибка 400!')
+                        setImage(error400)
+                        setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                        setText('Ты не отправил success в body вообще!')
+                        break
+                    }
+                    case 500: {
+                        setCode('Ошибка 500!')
+                        setImage(error500)
+                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                        setText('эмитация ошибки на сервере')
+                        break
+                    }
+                    default: {
+                        setCode('Error!')
+                        setImage(errorUnknown)
+                        setInfo('Network Error')
+                        setText('AxiosError')
+                        break
+                    }
                 }
-                if(e.response.status===400){
-                    setImage(error400)
-                    setCode(e.message)
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
-                }
-                //else {
-                 //   setImage(errorUnknown)
-                 //   setCode(e.message)
-                 //   setText(e.response.data.errorText)
-                 //   setInfo(e.response.data.info)
-               // }
-                // дописать
-
             })
     }
 
